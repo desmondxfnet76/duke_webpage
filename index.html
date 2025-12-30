@@ -3,51 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Meet Duke, the premier Giant Schnauzer stud with exceptional pedigree and legendary swagger."
+      content="Duke - Premier Giant Schnauzer stud service in Katy, Texas. Exceptional pedigree, champion bloodlines, and proven genetics for discerning breeders."
     />
     <meta
       name="keywords"
-      content="Giant Schnauzer, dog breeding, stud services, Duke, premium breeding"
+      content="Giant Schnauzer, dog breeding, stud services, Duke, premium breeding, Texas, Katy, AKC registered, champion bloodlines, dog stud"
     />
-    <title>Duke - The Legendary Giant Schnauzer Stud</title>
+    <meta name="author" content="Duke The Stud Prince" />
+    <meta name="robots" content="index, follow" />
 
-    <!-- Google Fonts -->
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Duke - The Legendary Giant Schnauzer Stud"
+    />
+    <meta
+      property="og:description"
+      content="Premium Giant Schnauzer stud service offering exceptional genetics and proven lineage for discerning breeders."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/assets/photos/duke-og-image.jpg"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Duke - The Legendary Giant Schnauzer Stud"
+    />
+    <meta
+      name="twitter:description"
+      content="Premium Giant Schnauzer stud service in Katy, Texas"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/assets/photos/duke-twitter.jpg"
+    />
+
+    <!-- Page Title -->
+    <title>
+      Duke - The Legendary Giant Schnauzer Stud | Premium Breeding Services in
+      Katy, TX
+    </title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+
+    <!-- Preconnect to Google Fonts for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
+    <link rel="preload" href="assets/photos/1767065991022.webp" as="image" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PetService",
+        "name": "Duke The Stud Prince",
+        "description": "Premium Giant Schnauzer stud service",
+        "url": "https://yourwebsite.com",
+        "telephone": "+1-832-773-2877",
+        "email": "dukethestudprince@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Katy",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "29.7858",
+          "longitude": "-95.8244"
+        },
+        "priceRange": "$$",
+        "image": "https://yourwebsite.com/assets/photos/duke-main.jpg"
+      }
+    </script>
   </head>
+
   <body>
+    <!-- Skip to Main Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
     <!-- ===================================
          NAVIGATION
          =================================== -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-container">
         <!-- Logo -->
-        <div class="logo">
+        <a href="#hero" class="logo" aria-label="Duke The Stud Prince - Home">
           <span class="logo-duke">DUKE</span
-          ><span class="logo-stud">.STUD</span>
-        </div>
+          ><span class="logo-stud">.THE STUD PRINCE</span>
+        </a>
 
         <!-- Desktop Navigation -->
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact" class="btn-pill">Book Duke</a>
+        <div class="nav-links" role="menubar">
+          <a href="#about" role="menuitem">About</a>
+          <a href="#services" role="menuitem">Services</a>
+          <a href="#gallery" role="menuitem">Gallery</a>
+          <a href="#testimonials" role="menuitem">Testimonials</a>
+          <a href="#contact" class="btn-pill" role="menuitem">Book Duke</a>
         </div>
 
         <!-- Mobile Hamburger Button -->
-        <button class="hamburger" id="hamburger">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -55,541 +157,1205 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#services" class="mobile-link">Services</a>
-        <a href="#gallery" class="mobile-link">Gallery</a>
-        <a href="#testimonials" class="mobile-link">Testimonials</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-        <a href="#contact" class="btn-pill mobile-link">Book Duke</a>
+      <div class="mobile-menu" id="mobileMenu" role="menu" aria-hidden="true">
+        <a href="#about" class="mobile-link" role="menuitem">About</a>
+        <a href="#services" class="mobile-link" role="menuitem">Services</a>
+        <a href="#gallery" class="mobile-link" role="menuitem">Gallery</a>
+        <a href="#testimonials" class="mobile-link" role="menuitem"
+          >Testimonials</a
+        >
+        <a href="#contact" class="btn-pill mobile-link" role="menuitem"
+          >Book Duke</a
+        >
       </div>
     </nav>
 
-    <!-- ===================================
+    <!-- Main Content Wrapper -->
+    <main id="main-content">
+      <!-- ===================================
          HERO SECTION
          =================================== -->
-    <section id="hero" class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="hero-subtitle">Giant Schnauzer Excellence</span>
-          <h1 class="hero-title">DUKE</h1>
-          <p class="hero-tagline">
-            The Stud. <span class="text-red">The Legend.</span>
-          </p>
-          <a href="#about" class="btn-pill btn-hero">Meet Duke</a>
+      <section id="hero" class="hero" aria-label="Hero section">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-subtitle" data-aos="fade-up"
+              >Giant Schnauzer Excellence</span
+            >
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+              DUKE
+            </h1>
+            <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400">
+              The Stud. <span class="text-red">The Legend.</span>
+            </p>
+            <a
+              href="#about"
+              class="btn-pill btn-hero"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              >Meet Duke</a
+            >
 
-          <!-- Decorative Dots -->
-          <div class="hero-dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <!-- Decorative Dots -->
+            <div
+              class="hero-dots"
+              aria-hidden="true"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Scroll Indicator -->
-      <div class="scroll-indicator">
-        <div class="scroll-box">
-          <div class="scroll-ball"></div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="scroll-box">
+            <div class="scroll-ball"></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===================================
+      <!-- ===================================
          ABOUT SECTION
          =================================== -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="about-grid">
-          <!-- Left: Image -->
-          <div class="about-image-container">
-            <div class="about-image">
-              <img
-                src="/assets/photos/IMG_20251220_073145.jpg"
-                alt="Duke the Giant Schnauzer"
-              />
-              <div class="image-overlay"></div>
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about-grid">
+            <!-- Left: Image -->
+            <div class="about-image-container" data-aos="fade-right">
+              <div class="about-image">
+                <img
+                  src="assets/photos/IMG_20251220_073145.jpg"
+                  alt="Duke the Giant Schnauzer standing majestically"
+                  loading="lazy"
+                  width="600"
+                  height="800"
+                />
+                <div class="image-overlay" aria-hidden="true"></div>
+              </div>
+
+              <!-- Stats Card -->
+              <div
+                class="stats-card glass"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="stat-item">
+                  <div class="stat-value">Giant Schnauzer</div>
+                  <div class="stat-label">Breed</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">3 Years</div>
+                  <div class="stat-label">Age</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">95 lbs</div>
+                  <div class="stat-label">Weight</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">27"</div>
+                  <div class="stat-label">Height</div>
+                </div>
+              </div>
             </div>
 
-            <!-- Stats Card -->
-            <div class="stats-card glass">
-              <div class="stat-item">
-                <div class="stat-value">Giant Schnauzer</div>
-                <div class="stat-label">Breed</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value">3 Years</div>
-                <div class="stat-label">Age</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value">95 lbs</div>
-                <div class="stat-label">Weight</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value">27"</div>
-                <div class="stat-label">Height</div>
-              </div>
-            </div>
-          </div>
+            <!-- Right: Content -->
+            <div class="about-content" data-aos="fade-left">
+              <span class="section-label">Meet The Legend</span>
+              <h2 class="section-title" id="about-title">
+                ABOUT <span class="text-gradient">DUKE</span>
+              </h2>
 
-          <!-- Right: Content -->
-          <div class="about-content">
-            <span class="section-label">Meet The Legend</span>
-            <h2 class="section-title">
-              ABOUT <span class="text-gradient">DUKE</span>
-            </h2>
+              <p class="about-text">
+                Duke is not just a Giant Schnauzer—he's a testament to the
+                breed's finest qualities. With an exceptional pedigree featuring
+                champion bloodlines and a temperament that perfectly balances
+                strength with gentleness, Duke represents the pinnacle of Giant
+                Schnauzer breeding excellence.
+              </p>
 
-            <p class="about-text">
-              Duke is not just a Giant Schnauzer—he's a testament to the breed's
-              finest qualities. With an exceptional pedigree featuring champion
-              bloodlines and a temperament that perfectly balances strength with
-              gentleness, Duke represents the pinnacle of Giant Schnauzer
-              breeding excellence.
-            </p>
+              <p class="about-text">
+                His striking black coat, commanding presence, and intelligent
+                demeanor make him an ideal stud for breeders seeking to produce
+                top-quality Giant Schnauzers with outstanding conformation and
+                temperament.
+              </p>
 
-            <p class="about-text">
-              His striking black coat, commanding presence, and intelligent
-              demeanor make him an ideal stud for breeders seeking to produce
-              top-quality Giant Schnauzers with outstanding conformation and
-              temperament.
-            </p>
+              <!-- Fun Facts Grid -->
+              <div class="fun-facts">
+                <div
+                  class="fact-card glass"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="fact-icon" aria-hidden="true">🎾</div>
+                  <h4 class="fact-title">Favorite Toy</h4>
+                  <p class="fact-text">
+                    Indestructible rubber ball - he never gets tired of fetch
+                  </p>
+                </div>
 
-            <!-- Fun Facts Grid -->
-            <div class="fun-facts">
-              <div class="fact-card glass">
-                <div class="fact-icon">🎾</div>
-                <h4 class="fact-title">Favorite Toy</h4>
-                <p class="fact-text">
-                  Indestructible rubber ball - he never gets tired of fetch
-                </p>
-              </div>
+                <div
+                  class="fact-card glass"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="fact-icon" aria-hidden="true">⚡</div>
+                  <h4 class="fact-title">Quirks</h4>
+                  <p class="fact-text">
+                    Loves to "talk" and has a signature head tilt when listening
+                  </p>
+                </div>
 
-              <div class="fact-card glass">
-                <div class="fact-icon">⚡</div>
-                <h4 class="fact-title">Quirks</h4>
-                <p class="fact-text">
-                  Loves to "talk" and has a signature head tilt when listening
-                </p>
-              </div>
+                <div
+                  class="fact-card glass"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <div class="fact-icon" aria-hidden="true">🏆</div>
+                  <h4 class="fact-title">Training Level</h4>
+                  <p class="fact-text">
+                    Expert obedience with advanced trick repertoire
+                  </p>
+                </div>
 
-              <div class="fact-card glass">
-                <div class="fact-icon">🏆</div>
-                <h4 class="fact-title">Training Level</h4>
-                <p class="fact-text">
-                  Expert obedience with advanced trick repertoire
-                </p>
-              </div>
-
-              <div class="fact-card glass">
-                <div class="fact-icon">❤️</div>
-                <h4 class="fact-title">Temperament</h4>
-                <p class="fact-text">
-                  Confident, loyal, intelligent with a playful spirit
-                </p>
+                <div
+                  class="fact-card glass"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="fact-icon" aria-hidden="true">❤️</div>
+                  <h4 class="fact-title">Temperament</h4>
+                  <p class="fact-text">
+                    Confident, loyal, intelligent with a playful spirit
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===================================
+      <!-- ===================================
          SERVICES SECTION
          =================================== -->
-    <section id="services" class="services">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-          <span class="section-label">Premium Breeding</span>
-          <h2 class="section-title">
-            STUD <span class="text-gradient">SERVICES</span>
-          </h2>
-          <p class="section-description">
-            Elevate your breeding program with Duke's exceptional genetics and
-            proven lineage
-          </p>
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-label">Premium Breeding</span>
+            <h2 class="section-title" id="services-title">
+              STUD <span class="text-gradient">SERVICES</span>
+            </h2>
+            <p class="section-description">
+              Elevate your breeding program with Duke's exceptional genetics and
+              proven lineage
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <article
+              class="service-card glass"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <span class="service-badge">Most Popular</span>
+              <h3 class="service-title">Premium Stud Service</h3>
+              <ul class="service-features">
+                <li>Live cover or artificial insemination available</li>
+                <li>Proven fertility with successful litters</li>
+                <li>Professional breeding support throughout process</li>
+                <li>Stud contract provided for your protection</li>
+              </ul>
+            </article>
+
+            <!-- Service 2 -->
+            <article
+              class="service-card glass"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <span class="service-badge">Verified</span>
+              <h3 class="service-title">Pedigree Excellence</h3>
+              <ul class="service-features">
+                <li>AKC registered with full documentation</li>
+                <li>Champion bloodlines on both sides</li>
+                <li>Health clearances: hips, elbows, eyes, heart</li>
+                <li>DNA profile on file with OFA</li>
+              </ul>
+            </article>
+
+            <!-- Service 3 -->
+            <article
+              class="service-card glass"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <span class="service-badge">Comprehensive</span>
+              <h3 class="service-title">Breeding Support</h3>
+              <ul class="service-features">
+                <li>Pre-breeding consultation included</li>
+                <li>Progeny tracking and updates</li>
+                <li>Guidance on whelping and puppy care</li>
+                <li>Ongoing breeder relationship</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Certifications -->
+          <div
+            class="certifications glass"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <h3 class="cert-title">
+              Health Certifications & <span class="text-gradient">Lineage</span>
+            </h3>
+            <div class="cert-grid">
+              <div class="cert-item">✓ AKC Registered</div>
+              <div class="cert-item">✓ OFA Hip Certified</div>
+              <div class="cert-item">✓ OFA Elbow Certified</div>
+              <div class="cert-item">✓ CERF Eye Certified</div>
+              <div class="cert-item">✓ Cardiac Clearance</div>
+              <div class="cert-item">✓ DNA Profiled</div>
+              <div class="cert-item">✓ Temperament Tested</div>
+              <div class="cert-item">✓ Conformation Champion</div>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="services-cta" data-aos="fade-up" data-aos-delay="500">
+            <a href="#contact" class="btn-pill">Book Stud Service</a>
+          </div>
         </div>
+      </section>
 
-        <!-- Services Grid -->
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <div class="service-card glass">
-            <span class="service-badge">Most Popular</span>
-            <h3 class="service-title">Premium Stud Service</h3>
-            <ul class="service-features">
-              <li>✓ Live cover or artificial insemination available</li>
-              <li>✓ Proven fertility with successful litters</li>
-              <li>✓ Professional breeding support throughout process</li>
-              <li>✓ Stud contract provided for your protection</li>
-            </ul>
+     <!-- ===================================
+     ENHANCED GALLERY SECTION
+     Scroll-Triggered Slide & Appear Animations
+     Modern, Premium Design
+     =================================== -->
+
+<section id="gallery" class="gallery-enhanced" aria-labelledby="gallery-title">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Visual Excellence</span>
+      <h2 class="section-title" id="gallery-title">
+        DUKE'S <span class="text-gradient">GALLERY</span>
+      </h2>
+      <p class="section-description">
+        A showcase of Duke's commanding presence and undeniable charisma
+      </p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="gallery-filters" data-aos="fade-up" data-aos-delay="100">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="portraits">Portraits</button>
+      <button class="filter-btn" data-filter="action">Action Shots</button>
+      <button class="filter-btn" data-filter="professional">Professional</button>
+    </div>
+
+    <!-- Staggered Gallery Grid with Scroll Animations -->
+    <div class="gallery-staggered">
+      
+      <!-- Photo 1 - Slide from Left -->
+      <div class="gallery-photo-wrapper" data-category="portraits professional" data-scroll-animation="slide-left">
+        <div class="gallery-photo glass">
+          <div class="photo-inner">
+            <img 
+              src="assets/photos/IMG_20251220_073145.jpg" 
+              alt="Duke - The Distinguished Gentleman"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-content">
+                <span class="photo-category">Professional Portrait</span>
+                <h3 class="photo-title">The Distinguished Gentleman</h3>
+                <p class="photo-description">Duke's commanding presence in full display</p>
+                <button class="photo-expand" aria-label="View fullscreen">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Expand</span>
+                </button>
+              </div>
+            </div>
           </div>
-
-          <!-- Service 2 -->
-          <div class="service-card glass">
-            <span class="service-badge">Verified</span>
-            <h3 class="service-title">Pedigree Excellence</h3>
-            <ul class="service-features">
-              <li>✓ AKC registered with full documentation</li>
-              <li>✓ Champion bloodlines on both sides</li>
-              <li>✓ Health clearances: hips, elbows, eyes, heart</li>
-              <li>✓ DNA profile on file with OFA</li>
-            </ul>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="service-card glass">
-            <span class="service-badge">Comprehensive</span>
-            <h3 class="service-title">Breeding Support</h3>
-            <ul class="service-features">
-              <li>✓ Pre-breeding consultation included</li>
-              <li>✓ Progeny tracking and updates</li>
-              <li>✓ Guidance on whelping and puppy care</li>
-              <li>✓ Ongoing breeder relationship</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Certifications -->
-        <div class="certifications glass">
-          <h3 class="cert-title">
-            Health Certifications & <span class="text-gradient">Lineage</span>
-          </h3>
-          <div class="cert-grid">
-            <div class="cert-item">✓ AKC Registered</div>
-            <div class="cert-item">✓ OFA Hip Certified</div>
-            <div class="cert-item">✓ OFA Elbow Certified</div>
-            <div class="cert-item">✓ CERF Eye Certified</div>
-            <div class="cert-item">✓ Cardiac Clearance</div>
-            <div class="cert-item">✓ DNA Profiled</div>
-            <div class="cert-item">✓ Temperament Tested</div>
-            <div class="cert-item">✓ Conformation Champion</div>
-          </div>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="services-cta">
-          <a href="#contact" class="btn-pill">Book Stud Service</a>
         </div>
       </div>
-    </section>
 
-    <!-- ===================================
-         GALLERY SECTION
-         =================================== -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-          <span class="section-label">Visual Excellence</span>
-          <h2 class="section-title">
-            DUKE'S <span class="text-gradient">GALLERY</span>
-          </h2>
-          <p class="section-description">
-            A showcase of Duke's commanding presence and undeniable charisma
-          </p>
-        </div>
-
-        <!-- Gallery Carousel -->
-        <div class="gallery-carousel">
-          <!-- Main Image Display -->
-          <div class="carousel-main">
-            <img
-              id="mainImage"
-              src="assets/photos/IMG_20251220_073014.jpg"
-              alt="Duke the Giant Schnauzer"
+      <!-- Photo 2 - Slide from Right -->
+      <div class="gallery-photo-wrapper" data-category="action" data-scroll-animation="slide-right">
+        <div class="gallery-photo glass">
+          <div class="photo-inner">
+            <img 
+              src="assets/photos/1766523055283.jpg" 
+              alt="Duke howling - Vocal Masterpiece"
+              loading="lazy"
             />
-            <div class="carousel-overlay"></div>
-            <div class="carousel-caption">
-              <h3 id="imageCaption">The Distinguished Gentleman</h3>
+            <div class="photo-overlay">
+              <div class="photo-content">
+                <span class="photo-category">Action Shot</span>
+                <h3 class="photo-title">Vocal Masterpiece</h3>
+                <p class="photo-description">Duke's powerful voice and personality</p>
+                <button class="photo-expand" aria-label="View fullscreen">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Expand</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 3 - Slide from Left -->
+      <div class="gallery-photo-wrapper" data-category="portraits" data-scroll-animation="slide-left">
+        <div class="gallery-photo glass">
+          <div class="photo-inner">
+            <img 
+              src="assets/photos/IMG_20251220_073014.jpg" 
+              alt="Duke close-up portrait"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-content">
+                <span class="photo-category">Portrait</span>
+                <h3 class="photo-title">Close & Personal</h3>
+                <p class="photo-description">Intimate portrait showcasing Duke's features</p>
+                <button class="photo-expand" aria-label="View fullscreen">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Expand</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4 - Slide from Right -->
+      <div class="gallery-photo-wrapper" data-category="professional action" data-scroll-animation="slide-right">
+        <div class="gallery-photo glass">
+          <div class="photo-inner">
+            <img 
+              src="assets/photos/IMG_20251220_073259.jpg" 
+              alt="Duke perfect stance"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-content">
+                <span class="photo-category">Professional</span>
+                <h3 class="photo-title">Perfect Stance</h3>
+                <p class="photo-description">Championship conformation at its finest</p>
+                <button class="photo-expand" aria-label="View fullscreen">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Expand</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 5 - Slide from Left -->
+      <div class="gallery-photo-wrapper" data-category="professional" data-scroll-animation="slide-left">
+        <div class="gallery-photo glass">
+          <div class="photo-inner">
+            <img 
+              src="assets/photos/IMG_20251220_073310.webp" 
+              alt="Duke full body professional shot"
+              loading="lazy"
+            />
+            <div class="photo-overlay">
+              <div class="photo-content">
+                <span class="photo-category">Professional</span>
+                <h3 class="photo-title">The Full Package</h3>
+                <p class="photo-description">Complete champion showcase</p>
+                <button class="photo-expand" aria-label="View fullscreen">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                  <span>Expand</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Call to Action -->
+    <div class="gallery-cta" data-aos="fade-up">
+      <p class="cta-text">Want to see Duke in person?</p>
+      <a href="#contact" class="btn-pill btn-hero">Book a Consultation</a>
+    </div>
+
+  </div>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="galleryLightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    
+    <button class="lightbox-nav lightbox-next" aria-label="Next photo">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+    
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" />
+      <div class="lightbox-info">
+        <span class="lightbox-category"></span>
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-description"></p>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- ===================================
+     VIDEO GALLERY SECTION
+     Modern Video Player with Grid
+     =================================== -->
+      <section id="videos" class="videos" aria-labelledby="videos-title">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-label">In Motion</span>
+            <h2 class="section-title" id="videos-title">
+              DUKE <span class="text-gradient">IN ACTION</span>
+            </h2>
+            <p class="section-description">
+              Experience Duke's personality and athleticism through professional
+              videography
+            </p>
+          </div>
+
+          <!-- Featured Video Player -->
+          <div class="featured-video" data-aos="fade-up" data-aos-delay="100">
+            <div class="video-player-wrapper">
+              <video
+                id="featuredVideo"
+                class="video-player"
+                poster="assets/videos/thumbnails/duke-featured.jpg"
+                controls
+                preload="metadata"
+              >
+                <source
+                  src="assets/videos/duke-featured.mp4"
+                  type="video/mp4"
+                />
+                <source
+                  src="assets/videos/duke-featured.webm"
+                  type="video/webm"
+                />
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Custom Video Controls Overlay (Optional) -->
+              <div class="video-info-overlay">
+                <div class="video-details">
+                  <h3 class="video-title">Duke's Championship Run</h3>
+                  <p class="video-description">
+                    Professional showcase highlighting Duke's athleticism and
+                    form
+                  </p>
+                  <div class="video-meta">
+                    <span class="video-duration">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      2:45
+                    </span>
+                    <span class="video-date">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      Dec 2024
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Grid -->
+          <div class="video-grid" data-aos="fade-up" data-aos-delay="200">
+            <!-- Video Item 1 -->
+            <div class="video-item" data-video-id="1">
+              <div class="video-thumbnail">
+                <img
+                  src="assets/videos/thumbnails/duke-training.jpg"
+                  alt="Duke training session"
+                  loading="lazy"
+                />
+                <div class="video-play-button">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <div class="video-duration-badge">1:30</div>
+                <div class="video-overlay">
+                  <div class="video-info">
+                    <h4>Training Excellence</h4>
+                    <p>Advanced obedience demonstration</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Navigation Arrows -->
-            <button class="carousel-btn carousel-prev" id="prevBtn">‹</button>
-            <button class="carousel-btn carousel-next" id="nextBtn">›</button>
-          </div>
+            <!-- Video Item 2 -->
+            <div class="video-item" data-video-id="2">
+              <div class="video-thumbnail">
+                <img
+                  src="assets/videos/thumbnails/duke-puppies.jpg"
+                  alt="Duke with his puppies"
+                  loading="lazy"
+                />
+                <div class="video-play-button">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <div class="video-duration-badge">3:15</div>
+                <div class="video-overlay">
+                  <div class="video-info">
+                    <h4>Meet the Legacy</h4>
+                    <p>Duke with his latest litter</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <!-- Thumbnail Navigation -->
-          <div class="carousel-thumbnails">
-            <button class="thumbnail active" data-index="0">
-              <img
-                src="assets/photos/IMG_20251220_073259.jpg"
-                alt="Duke portrait"
-              />
-            </button>
-            <button class="thumbnail" data-index="1">
-              <img
-                src="assets/photos/IMG_20251220_073310.jpg"
-                alt="Duke howling"
-              />
-            </button>
-            <button class="thumbnail" data-index="2">
-              <img src="images/IMG_20251220_073014.jpg" alt="Duke close-up" />
-            </button>
-            <button class="thumbnail" data-index="3">
-              <img
-                src="images/IMG_20251220_073259.jpg"
-                alt="Duke side profile"
-              />
-            </button>
-            <button class="thumbnail" data-index="4">
-              <img src="images/IMG_20251220_073310.jpg" alt="Duke full body" />
-            </button>
-          </div>
+            <!-- Video Item 3 -->
+            <div class="video-item" data-video-id="3">
+              <div class="video-thumbnail">
+                <img
+                  src="assets/videos/thumbnails/duke-show.jpg"
+                  alt="Duke at dog show"
+                  loading="lazy"
+                />
+                <div class="video-play-button">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <div class="video-duration-badge">2:00</div>
+                <div class="video-overlay">
+                  <div class="video-info">
+                    <h4>Championship Form</h4>
+                    <p>AKC show highlights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <!-- Indicator Dots -->
-          <div class="carousel-indicators">
-            <span class="indicator active" data-index="0"></span>
-            <span class="indicator" data-index="1"></span>
-            <span class="indicator" data-index="2"></span>
-            <span class="indicator" data-index="3"></span>
-            <span class="indicator" data-index="4"></span>
+            <!-- Video Item 4 -->
+            <div class="video-item" data-video-id="4">
+              <div class="video-thumbnail">
+                <img
+                  src="assets/videos/thumbnails/duke-personality.jpg"
+                  alt="Duke personality showcase"
+                  loading="lazy"
+                />
+                <div class="video-play-button">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <div class="video-duration-badge">1:45</div>
+                <div class="video-overlay">
+                  <div class="video-info">
+                    <h4>Duke's Personality</h4>
+                    <p>Behind the scenes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ADD MORE VIDEOS HERE - Copy this template: -->
+            <!--
+      <div class="video-item" data-video-id="5">
+        <div class="video-thumbnail">
+          <img 
+            src="assets/videos/thumbnails/YOUR-THUMBNAIL.jpg" 
+            alt="Video description" 
+            loading="lazy"
+          />
+          <div class="video-play-button">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div class="video-duration-badge">0:00</div>
+          <div class="video-overlay">
+            <div class="video-info">
+              <h4>Video Title</h4>
+              <p>Video description</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      -->
+          </div>
 
-    <!-- ===================================
+          <!-- Video Modal for Full Screen -->
+          <div class="video-modal" id="videoModal" aria-hidden="true">
+            <button class="video-modal-close" aria-label="Close video">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div class="video-modal-content">
+              <video id="modalVideo" controls preload="metadata">
+                <source src="" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-modal-info">
+                <h3 id="modalVideoTitle">Video Title</h3>
+                <p id="modalVideoDescription">Video description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================
          TESTIMONIALS SECTION
          =================================== -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-          <span class="section-label">Client Praise</span>
-          <h2 class="section-title">
-            WHAT BREEDERS <span class="text-gradient">SAY</span>
-          </h2>
-          <p class="section-description">
-            Don't just take our word for it—hear from satisfied breeders who've
-            worked with Duke
-          </p>
-        </div>
-
-        <!-- Testimonials Grid -->
-        <div class="testimonials-grid">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-card glass">
-            <div class="stars">★★★★★</div>
-            <p>
-              "Duke's puppies are absolutely stunning. The temperament and
-              structure we got from his lineage exceeded all our expectations.
-              He's truly a remarkable stud."
+      <section
+        id="testimonials"
+        class="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-label">Client Praise</span>
+            <h2 class="section-title" id="testimonials-title">
+              WHAT BREEDERS <span class="text-gradient">SAY</span>
+            </h2>
+            <p class="section-description">
+              Don't just take our word for it—hear from satisfied breeders
+              who've worked with Duke
             </p>
-            <div class="author-name">Sarah Mitchell</div>
-            <div class="author-role">Certified Breeder, California</div>
           </div>
 
-          <!-- Testimonial 2 -->
-          <div class="testimonial-card glass">
-            <div class="stars">★★★★★</div>
-            <p>
-              "Working with Duke's owner was a professional experience from
-              start to finish. The health clearances, documentation, and support
-              were top-notch. Duke produced exceptional offspring."
-            </p>
-            <div class="author-name">Robert Chen</div>
-            <div class="author-role">Giant Schnauzer Enthusiast, Texas</div>
+          <!-- Testimonials Grid -->
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <article
+              class="testimonial-card glass"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p>
+                "Duke's puppies are absolutely stunning. The temperament and
+                structure we got from his lineage exceeded all our expectations.
+                He's truly a remarkable stud."
+              </p>
+              <div class="author-name">Sarah Mitchell</div>
+              <div class="author-role">Certified Breeder, California</div>
+            </article>
+
+            <!-- Testimonial 2 -->
+            <article
+              class="testimonial-card glass"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p>
+                "Working with Duke's owner was a professional experience from
+                start to finish. The health clearances, documentation, and
+                support were top-notch. Duke produced exceptional offspring."
+              </p>
+              <div class="author-name">Robert Chen</div>
+              <div class="author-role">Giant Schnauzer Enthusiast, Texas</div>
+            </article>
+
+            <!-- Testimonial 3 -->
+            <article
+              class="testimonial-card glass"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <p>
+                "Duke's genetics speak for themselves. Beautiful structure,
+                wonderful temperament, and his puppies have that same commanding
+                presence. Couldn't be happier with the litter!"
+              </p>
+              <div class="author-name">Jennifer Rodriguez</div>
+              <div class="author-role">Professional Handler, Florida</div>
+            </article>
           </div>
 
-          <!-- Testimonial 3 -->
-          <div class="testimonial-card glass">
-            <div class="stars">★★★★★</div>
-            <p>
-              "Duke's genetics speak for themselves. Beautiful structure,
-              wonderful temperament, and his puppies have that same commanding
-              presence. Couldn't be happier with the litter!"
-            </p>
-            <div class="author-name">Jennifer Rodriguez</div>
-            <div class="author-role">Professional Handler, Florida</div>
+          <!-- Success Stats -->
+          <div
+            class="testimonial-stats glass"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="stat-box">
+              <div class="stat-number">15+</div>
+              <div class="stat-text">Successful Litters</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">100%</div>
+              <div class="stat-text">Satisfaction Rate</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">50+</div>
+              <div class="stat-text">Healthy Puppies</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">5★</div>
+              <div class="stat-text">Average Rating</div>
+            </div>
           </div>
         </div>
-
-        <!-- Success Stats -->
-        <div class="testimonial-stats glass">
-          <div class="stat-box">
-            <div class="stat-number">15+</div>
-            <div class="stat-text">Successful Litters</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">100%</div>
-            <div class="stat-text">Satisfaction Rate</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">50+</div>
-            <div class="stat-text">Healthy Puppies</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">5★</div>
-            <div class="stat-text">Average Rating</div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <!-- ===================================
-         CONTACT SECTION
-         =================================== -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header">
-          <span class="section-label">Get In Touch</span>
-          <h2 class="section-title">
-            BOOK <span class="text-gradient">DUKE</span>
-          </h2>
-          <p class="section-description">
-            Ready to elevate your breeding program? Let's discuss how Duke can
-            contribute to your kennel's success
-          </p>
-        </div>
+     ENHANCED CONTACT SECTION
+     Modern, Attractive, Engaging Design
+     Premium User Experience
+     =================================== -->
 
-        <!-- Contact Grid -->
-        <div class="contact-grid">
-          <!-- Left: Contact Info -->
-          <div class="contact-info">
-            <h3 class="contact-subtitle">
-              Let's Make <span class="text-gradient">Magic</span>
-            </h3>
+<section id="contact" class="contact-premium" aria-labelledby="contact-title">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title" id="contact-title">
+        BOOK <span class="text-gradient">DUKE</span>
+      </h2>
+      <p class="section-description">
+        Ready to elevate your breeding program? Let's discuss how Duke can contribute to your kennel's success
+      </p>
+    </div>
 
-            <div class="contact-details">
-              <!-- Email -->
-              <div class="contact-item">
-                <div class="contact-label">Email</div>
-                <a href="mailto:duke@studservices.com">duke@studservices.com</a>
+    <!-- Split Layout -->
+    <div class="contact-split">
+      
+      <!-- Left Side - Info Cards -->
+      <div class="contact-info-side" data-aos="fade-right">
+        
+        <!-- Main Info Card -->
+        <div class="info-card-main glass">
+          <div class="info-card-header">
+            <div class="info-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h3 class="info-card-title">Visit Us</h3>
+              <p class="info-card-subtitle">We're located in Katy, Texas</p>
+            </div>
+          </div>
+          
+          <div class="info-details">
+            <div class="info-item">
+              <svg class="info-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Katy, Texas</span>
               </div>
-
-              <!-- Phone -->
-              <div class="contact-item">
-                <div class="contact-label">Phone</div>
-                <a href="tel:+15551234567">(555) 123-4567</a>
-              </div>
-
-              <!-- Location -->
-              <div class="contact-item">
-                <div class="contact-label">Location</div>
-                <div>Houston, Texas</div>
+            </div>
+            
+            <div class="info-item">
+              <svg class="info-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <span class="info-label">Response Time</span>
+                <span class="info-value">Within 24 hours</span>
               </div>
             </div>
           </div>
 
-          <!-- Right: Contact Form -->
-          <div class="contact-form-container glass">
-            <form id="contactForm" class="contact-form">
-              <!-- Name Field -->
-              <div class="form-group">
-                <label for="name">Your Name *</label>
+          <div class="trust-badges-inline">
+            <div class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span>AKC Certified</span>
+            </div>
+            <div class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9 11l3 3L22 4" stroke="white" stroke-width="2" fill="none"></path>
+              </svg>
+              <span>Health Tested</span>
+            </div>
+            <div class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Proven Lineage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Methods -->
+        <div class="contact-methods" data-aos="fade-right" data-aos-delay="100">
+          <a href="mailto:dukethestudprince@gmail.com" class="contact-method-card glass">
+            <div class="method-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="method-content">
+              <span class="method-label">Email Us</span>
+              <span class="method-value">dukethestudprince@gmail.com</span>
+            </div>
+            <div class="method-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </a>
+
+          <a href="tel:+18327732877" class="contact-method-card glass">
+            <div class="method-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="method-content">
+              <span class="method-label">Call Us</span>
+              <span class="method-value">+1 (832) 773-2877</span>
+            </div>
+            <div class="method-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="contact-quick-stats glass" data-aos="fade-right" data-aos-delay="200">
+          <div class="quick-stat">
+            <div class="stat-number">24h</div>
+            <div class="stat-label">Response Time</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="quick-stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="quick-stat">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Rated Service</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Side - Modern Form -->
+      <div class="contact-form-side" data-aos="fade-left">
+        <div class="form-container glass">
+          
+          <div class="form-header">
+            <h3 class="form-title">Send Us a Message</h3>
+            <p class="form-subtitle">Fill out the form below and we'll get back to you shortly</p>
+          </div>
+
+          <form id="contactForm" class="premium-form">
+            
+            <!-- Name & Email Row -->
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  Full Name <span class="required">*</span>
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  placeholder="John Doe"
+                  placeholder="John Smith"
+                  class="form-input"
+                  autocomplete="name"
                 />
               </div>
 
-              <!-- Email Field -->
-              <div class="form-group">
-                <label for="email">Email Address *</label>
+              <div class="form-field">
+                <label for="email" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  Email Address <span class="required">*</span>
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
                   placeholder="john@example.com"
+                  class="form-input"
+                  autocomplete="email"
                 />
               </div>
+            </div>
 
-              <!-- Phone Field -->
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
+            <!-- Phone & Service Row -->
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phone" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  Phone Number
+                </label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="(555) 123-4567"
+                  placeholder="(123) 456-7890"
+                  class="form-input"
+                  autocomplete="tel"
                 />
               </div>
 
-              <!-- Message Field -->
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="5"
-                  placeholder="Tell us about your breeding program and what you're looking for..."
-                ></textarea>
+              <div class="form-field">
+                <label for="service" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="9" x2="15" y2="9"></line>
+                    <line x1="9" y1="15" x2="15" y2="15"></line>
+                  </svg>
+                  Service Interest <span class="required">*</span>
+                </label>
+                <div class="select-wrapper">
+                  <select id="service" name="service" required class="form-input form-select">
+                    <option value="">Select a service</option>
+                    <option value="stud">Stud Service</option>
+                    <option value="consultation">Breeding Consultation</option>
+                    <option value="pedigree">Pedigree Information</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+                  <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
               </div>
+            </div>
 
-              <!-- Submit Button -->
-              <button type="submit" class="btn-pill btn-submit">
-                Send Inquiry
-              </button>
-            </form>
-          </div>
+            <!-- Message Field -->
+            <div class="form-field">
+              <label for="message" class="form-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Your Message <span class="required">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Tell us about your breeding program and what you're looking for..."
+                class="form-input form-textarea"
+              ></textarea>
+              <div class="char-counter">
+                <span id="charCount">0</span> / 500 characters
+              </div>
+            </div>
+
+            <!-- Privacy Checkbox -->
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="privacy" name="privacy" required class="form-checkbox" />
+              <label for="privacy" class="form-checkbox-label">
+                I agree to be contacted regarding my inquiry and consent to the collection of my information. <span class="required">*</span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="form-submit-premium">
+              <span class="btn-text">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Send Message
+              </span>
+              <span class="btn-loading" style="display: none;">
+                <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="2" x2="12" y2="6"></line>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                  <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                  <line x1="2" y1="12" x2="6" y2="12"></line>
+                  <line x1="18" y1="12" x2="22" y2="12"></line>
+                  <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                  <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                </svg>
+                Sending...
+              </span>
+              <div class="btn-shine"></div>
+            </button>
+
+            <!-- Form Status -->
+            <div class="form-status" id="formStatus" style="display: none;"></div>
+
+          </form>
         </div>
       </div>
-    </section>
 
-    <!-- ===================================
-         FOOTER
-         =================================== -->
-    <footer class="footer">
-      <div class="container">
-        <!-- Footer Grid -->
-        <div class="footer-grid">
-          <!-- Column 1: Logo & Description -->
-          <div class="footer-col">
-            <div class="footer-logo">
-              <span class="logo-duke">DUKE</span
-              ><span class="logo-stud">.STUD</span>
-            </div>
-            <p>
-              Premier Giant Schnauzer stud service offering exceptional genetics
-              and proven lineage for discerning breeders.
-            </p>
-          </div>
+    </div>
 
-          <!-- Column 2: Quick Links -->
-          <div class="footer-col">
-            <h3>Quick Links</h3>
-            <nav>
-              <a href="#about">About Duke</a>
-              <a href="#services">Stud Services</a>
-              <a href="#gallery">Gallery</a>
-              <a href="#testimonials">Testimonials</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </div>
-
-          <!-- Column 3: Contact Info -->
-          <div class="footer-col">
-            <h3>Get In Touch</h3>
-            <div>
-              <a href="mailto:duke@studservices.com">duke@studservices.com</a>
-            </div>
-            <div>
-              <a href="tel:+15551234567">(555) 123-4567</a>
-            </div>
-            <div>Houston, Texas</div>
-          </div>
-        </div>
+  </div>
+</section>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
           <p>
-            © <span id="year"></span> Duke Stud Services. All rights reserved.
+            © <span id="year"></span> Duke The Stud Prince. All rights reserved.
           </p>
-          <p>Powered by <span class="text-red">Duke Swagger</span></p>
+          <p>Powered by <span class="text-red">Duke Swagger</span> 💪</p>
         </div>
       </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="back-to-top"
+      aria-label="Back to top"
+      style="display: none"
+    >
+      ↑
+    </button>
+
     <!-- ===================================
          JAVASCRIPT
          =================================== -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
+
+    <!-- AOS (Animate On Scroll) Library - Optional -->
+    <!-- Uncomment below to enable scroll animations -->
+    <!-- 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
+    -->
   </body>
 </html>
